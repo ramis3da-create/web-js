@@ -1,0 +1,161 @@
+
+
+#cart{
+    width: 400px;
+    height: 400px;
+    background-color:palegreen;
+    border: #333 solid 2px;
+}
+#price{
+    width: 400px;
+    height: 400px;
+    background-color:palegreen;
+    border: #333 solid 2px;
+}
+.Products {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #ea2020;
+    margin: 8px auto 0 auto;
+}
+
+.Product {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.box {
+    background: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: fadeInUp 0.8s ease backwards;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    perspective: 1000px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.box:hover .image-container img {
+    transform: scale(1.08) rotate(1deg);
+}
+
+.image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.4),
+        transparent
+    );
+    transform: skewX(-25deg);
+    z-index: 2;
+}
+
+.box:hover .image-container::before {
+    left: 125%;
+    transition: left 0.7s ease-in-out;
+}
+
+.buy-btn {
+    background-color: #25d366;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transform: translateY(20px);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.box:hover .buy-btn {
+    transform: translateY(0);
+}
+
+.buy-btn:hover {
+    background-color: #1ebe5d;
+}
+
+.product-info {
+    padding: 20px;
+    text-align: right;
+}
+
+.product-info h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.price-box {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.current-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ea2020;
+}
+
+.old-price {
+    font-size: 14px;
+    color: #888;
+    text-decoration: line-through;
+}
+
+
+
+.mybtn{
+
+    background-color: #1ebe5d;
+    width: 60px;
+    height: 35px;
+    margin-left: auto;
+
+}
